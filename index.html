@@ -5,7 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+	$(function(){
+      $("header").load("navigator.html"); 
+    });
+  </script> 
   <style>
   .nav-color {
     background-color: #4CE9CA!important;
@@ -22,30 +27,18 @@ background-repeat: no-repeat;
 }
   </style>
 </head>
+<header></header>
 <body>
+<main class="cover text-center">
+<p>Amidst social distancing, financial uncertainty and economic downturn, many charities, fundraising efforts and NGOs have been hit hard this year.
 
-<div class="header-banner text-center" style="margin-bottom:0">
-  <h1>My First Bootstrap 4 Page</h1>
-  <p>Resize this responsive page to see the effect!</p> 
- 
-</div>
+With the announcement of the Movement Control Order (MCO), it becomes all the more difficult for Malaysians to volunteer their time and effort helping those who could really use it. 
 
-<nav class="navbar navbar-expand navbar-dark nav-color">
-  <a class="navbar-brand" href="#">Home Page</a>
- <div >
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Your Request</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">I need help!</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Donate/Volunteer</a>
-      </li>    
-    </ul>
-  </div>  
-</nav>
-
+This is a platform to gather helping hands and also for those who struggle to meet ends to seek help.
+</p>
+<p>
+<a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+</p>
+</main>
 </body>
 </html>
