@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap 4 Website Example</title>
+  <title>Project 0 Send us your loves page.</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -51,30 +51,73 @@ header p {
     margin-left: 25%;
     margin-right:25%
 }
+
+main > h5 {
+	font-family: Courier, Verdana, Garamond;
+    font-weight: bold;
+  letter-spacing: normal;
+  line-height: normal;
+  color: #002a3a;
+  white-space: nowrap;
+  
+
+}
+
+img{
+	width:100%;
+}
+
+.image-description
+{
+	font-family: Courier, Verdana, Garamond;
+    font-weight: bold;
+  letter-spacing: normal;
+  line-height: normal;
+  color: #002a3a;
+  white-space: wrap;
+  text-align: center;
+   padding: 70px 0; 
+
+}
+
+@media only screen and (max-width: 768px) {
+  img{
+    display:none
+  }
+}
+
+@media print {
+  img{
+    display:none
+  }
+}
   </style>
   
 </head>
 <body>
 <header></header>
 <main>
-  <h5>Here's how can you help.</h5>
-  <div >
+  <h5>Send us your loves.</h5>
   
-    <h6>Groceries</h6>
- 
-  
-    <p>
-    <img src="https://www.presidentapartments.com.au/assets/cache/holiday-groceries-2u-800x600cy.jpg" alt="Groceries" style="float:right;width:42px;height:42px;">
-    We need groceries like rice, milo, egg, vegetables etc
-    </p>
+  <div class="row">
+  	<div class="col-md-8 image-description">
+    	<h5>Groceries</h5>
+	 	We need groceries like rice, milo, egg, vegetables etc
+     </div>
+     <div class="col-md-4">
+	<img src="https://www.presidentapartments.com.au/assets/cache/holiday-groceries-2u-800x600cy.jpg" alt="Groceries" width="600" height="400" >
+	</div >
   </div >
-  <div >
-    <h6>Volunteers<h6>
-    <p>
-    <img src="https://www.deccanherald.com/sites/dh/files/article_images/2020/03/24/file79u7gdxw8chtc1z52qm-1585057526.jpg" alt="Volunteers" style="float:left;width:42px;height:42px;">
-    We need helps to distribute the groceries to those who need it. 
-    </p>
-  </div>
+  
+  <div class="row">
+  
+<div class="col-md-4">     
+<img src="https://www.deccanherald.com/sites/dh/files/article_images/2020/03/24/file79u7gdxw8chtc1z52qm-1585057526.jpg" alt="Volunteers" width="600" height="400"></div >
+<div class="col-md-8 image-description">
+<h5>Volunteers </h5> We need helps to distribute the groceries to those who need it.</div >
+  
+  </div >
+   
 
 </main>
 </body>
