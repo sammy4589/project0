@@ -1,0 +1,38 @@
+header h1, header p, main > h5, .image-description {
+  font-family: Courier, Verdana, Garamond;
+  font-weight: bold;
+  line-height: normal;
+  color: #002a3a;
+  letter-spacing: normal; }
+
+.nav-color {
+  background-color: #002a3a !important; }
+
+.header-banner {
+  padding: 4rem 2rem;
+  border-radius: .3rem;
+  background-image: url("https://www.sigmacourses.com/wp-content/uploads/2019/10/charity-courses.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; }
+
+header h1 {
+  white-space: nowrap; }
+
+header p {
+  white-space: nowrap; }
+
+.body-center {
+  font-family: Courier, Verdana, Garamond;
+  font-weight: bold;
+  margin-left: 25%;
+  margin-right: 25%; }
+
+main > h5 {
+  white-space: nowrap; }
+
+.image-description {
+  white-space: wrap;
+  text-align: center;
+  padding: 70px 0; }
+
+/*# sourceMappingURL=Project0style.css.map */
