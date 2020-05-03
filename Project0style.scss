@@ -36,8 +36,7 @@ header p {
 
 .body-center{
 
-	font-family: Courier, Verdana, Garamond;
-    font-weight: bold;
+	@extend %text_style;
   	margin-left: 25%;
   	margin-right:25%
 }
@@ -57,3 +56,38 @@ main > h5 {
 	padding: 70px 0; 
 
 }
+
+table {
+  	font-family: Courier, Verdana, Garamond;
+	font-weight: bold;
+	color: $text_color;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: left;
+	padding: 8px;
+	
+	tr{
+		 &:hover{background-color: #ddd;}
+		 
+		}
+		
+	th {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		background-color: $text_color;
+		color: white;
+		border: 1px solid #ddd;
+		padding: 8px
+	
+		}
+	td{
+		border: 1px solid #ddd;
+		padding: 8px
+	
+		}
+		
+		
+}
+
+
+
