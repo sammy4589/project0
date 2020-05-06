@@ -14,4 +14,5 @@ requestform.html display a form which allow user to submit a request to seek hel
 
 ContactUs.html listed each of the contacts for each area in a table.
 
+There is only one scss file and one css file used in this project.
 
