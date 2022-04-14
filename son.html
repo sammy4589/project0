@@ -5,19 +5,30 @@
 
  	<!-- We will customize Jira in the following script tag -->
 
-	<script type="text/javascript">
-	    async function getSrc() {
-      		const res = await fetch("https://s1-jira-01.kinesso.com/rest/collectors/1.0/template/form/0e86581a?os_authType=none", {
-        	method: 'GET',
-        	headers: {
-          	'X-Atlassian-Token': 'no-check'
-        	}
-      		});
-      		const blob = await res.blob();
-      		const urlObject = URL.createObjectURL(blob);
-      	document.querySelector('atlwdg-frame').setAttribute("src", urlObject)
+var myIframe = document.querySelector('#atlwdg-frame');
+var myURL= 'https://s1-jira-01.kinesso.com/rest/collectors/1.0/template/form/0e86581a?os_authType=none'
+
+populateIframe(myIframe, myURL, [['X-Atlassian-Token', 'no-check']]);
+
+function populateIframe(iframe, url, headers) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url);
+  xhr.onreadystatechange = handler;
+  xhr.responseType = 'blob';
+  headers.forEach(function(header) {
+    xhr.setRequestHeader(header[0], header[1]);
+  });
+  xhr.send();
+
+  function handler() {
+    if (this.readyState === this.DONE) {
+      if (this.status === 200) {
+        iframe.src = URL.createObjectURL(this.response);
+      } else {
+        console.error('Request failed', this);
+      }
     }
-    getSrc();
-	</script>
+  }
+}
 
 </body>
