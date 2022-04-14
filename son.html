@@ -1,0 +1,66 @@
+<body>
+
+	<h2>Jira Issue Collector Demo</h2>
+	<a href="#" id="feedback_button" class='btn btn-primary btn-large'>Report feedback</a><br />
+	<a href="#" id="bug_button" class='btn btn-primary btn-large'>Report bug</a>
+
+  	<!-- Jira Issue Collector - append this at the bottom of <body> -->
+    <script type="text/javascript" src="https://s1-jira-01.kinesso.com/s/03b80735acfa57e35e519d1b807ee096-T/y38jp1/806000/2e30ca38cf3ed02f97c5ab3998ca893a/3.1.0/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=0e86581a"></script>
+
+ 	<!-- We will customize Jira in the following script tag -->
+
+	<script type="text/javascript">
+		// safely use jquery here since the issue collector will load it for you
+		$(document).ready(function() {
+ 
+			window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
+ 
+				// ==== bug collector ====
+				'0e86581a' : {
+					// === custom trigger function ===
+
+					  triggerFunction : function( showCollectorDialog ) {
+						$('#bug_button').click( function(e) {
+							e.preventDefault();
+							showCollectorDialog();
+						});
+ 					}
+
+
+					// === additional environment details ===
+					, environment : function() {
+		
+						var env_info = {};
+ 
+						if ( window.ADDITIONAL_CUSTOM_CONTEXT ) {
+							env_info[ 'Additional Context Information' ] = window.ADDITIONAL_CUSTOM_CONTEXT;
+						}
+ 
+						return env_info;
+					}
+					// === default field values ===
+					, fieldValues : function() {
+ 
+						var values = {};
+ 		
+						var error_message = $('.error_message');
+						if ( error_message.length !== 0 ) {
+
+							// record error message from the page context rather than asking the user to enter it
+							values[ 'summary' ] = error_message.children('.summary').text();
+							values[ 'description' ] = error_message.children('.description').text();
+
+						}
+ 
+						return values;
+ 
+					}
+ 
+				}
+ 
+			});
+
+		});
+	</script>
+
+</body>
