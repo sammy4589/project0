@@ -14,7 +14,7 @@
       		const urlObject = URL.createObjectURL(blob);
       		document.querySelector('atlwdg-frame').setAttribute("src", urlObject)
 	    }
-		const begin = document.querySelector('#atlwdg-frame');
+		const begin = await document.querySelector('#atlwdg-frame');
 			begin.onload = () => {
 				getSrc();
 				}
