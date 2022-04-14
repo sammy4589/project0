@@ -6,7 +6,7 @@
 	    async function getSrc() {
 		    const begin = await document.querySelector('#atlwdg-frame');
 			begin.onload = () => {
-				const res = await fetch("https://s1-jira-01.kinesso.com/rest/collectors/1.0/template/form/0e86581a?os_authType=none", {
+				const res = fetch("https://s1-jira-01.kinesso.com/rest/collectors/1.0/template/form/0e86581a?os_authType=none", {
         			method: 'GET',
         			headers: {
           				'X-Atlassian-Token': 'no-check'
