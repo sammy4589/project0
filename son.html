@@ -3,22 +3,26 @@
 <script type="text/javascript" src="https://s1-jira-01.kinesso.com/s/03b80735acfa57e35e519d1b807ee096-T/y38jp1/806000/2e30ca38cf3ed02f97c5ab3998ca893a/3.1.0/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=0e86581a"></script>
 
 	<script type="text/javascript">
-	    async function getSrc() {
-		    const begin = await document.querySelector('#atlwdg-frame');
-			begin.onload = () => {
-				const res = fetch("https://s1-jira-01.kinesso.com/rest/collectors/1.0/template/form/0e86581a?os_authType=none", {
-        			method: 'GET',
-        			headers: {
-          				'X-Atlassian-Token': 'no-check'
-        			}
-				});
-				console.log('frame selected');
+	async function pgLoad() {
+		const begin = await document.querySelector('#atlwdg-frame');
+		begin.onload = () => {
+			getSrc();
+		}
+	}
+	
+	async function getSrc() {
+		const res = await fetch("https://s1-jira-01.kinesso.com/rest/collectors/1.0/template/form/0e86581a?os_authType=none", {
+        		method: 'GET',
+        		headers: {
+          			'X-Atlassian-Token': 'no-check'
+        		}
+			});
+			console.log('frame selected');
 			const blob = await res.blob();
 			const urlObject = URL.createObjectURL(blob);
 			document.querySelector('#atlwdg-frame').setAttribute("src", urlObject)
-			}
+		}
       		
-	    }
-		getSrc();
+	}
 	</script>
 </body>
