@@ -7,7 +7,10 @@
 		window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
 	// ==== custom trigger function ====
 	triggerFunction : function( showIssueCollector ) {
-		...
+		$('#atlwdg-trigger').click( function(e) {
+			e.preventDefault();
+			showCollectorDialog();
+			});
 	}
 	// ==== Special field config for environment ====
 	, environment : function() {
