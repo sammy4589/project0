@@ -11,7 +11,8 @@
         			headers: {
           				'X-Atlassian-Token': 'no-check'
         			}
-					});
+				});
+				console.log('frame selected');
 			const blob = await res.blob();
 			const urlObject = URL.createObjectURL(blob);
 			document.querySelector('#atlwdg-frame').setAttribute("src", urlObject)
