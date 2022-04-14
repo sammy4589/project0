@@ -1,35 +1,17 @@
 <body>
-  	<!-- Jira Issue Collector - append this at the bottom of <body> -->
-    	<script type="text/javascript" src="https://s1-jira-01.kinesso.com/s/d41d8cd98f00b204e9800998ecf8427e-CDN/y38jp1/806000/2e30ca38cf3ed02f97c5ab3998ca893a/2.2.4.7/_/download/batch/com.atlassian.plugins.jquery:jquery/com.atlassian.plugins.jquery:jquery.js?collectorId=0e86581a"></script>
-	<script type="text/javascript" src="https://s1-jira-01.kinesso.com/s/03b80735acfa57e35e519d1b807ee096-T/y38jp1/806000/2e30ca38cf3ed02f97c5ab3998ca893a/3.1.0/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=0e86581a"></script>
+<script type="text/javascript" src="https://s1-jira-01.kinesso.com/s/d41d8cd98f00b204e9800998ecf8427e-CDN/y38jp1/806000/2e30ca38cf3ed02f97c5ab3998ca893a/2.2.4.7/_/download/batch/com.atlassian.plugins.jquery:jquery/com.atlassian.plugins.jquery:jquery.js?collectorId=0e86581a"></script>
+<script type="text/javascript" src="https://s1-jira-01.kinesso.com/s/03b80735acfa57e35e519d1b807ee096-T/y38jp1/806000/2e30ca38cf3ed02f97c5ab3998ca893a/3.1.0/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=0e86581a"></script>
 
- 	<!-- We will customize Jira in the following script tag -->
 <script type="text/javascript">
-var myIframe = document.querySelector('#atlwdg-frame');
-var myURL= 'https://s1-jira-01.kinesso.com/rest/collectors/1.0/template/form/0e86581a?os_authType=none'
+	$(document).ready(function() {
+		window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
+			'0e86581a' : {
+				environment : {
+					'X-Atlassian-Token' : 'no-check'
+				}
+			}
+		});
 
-populateIframe(myIframe, myURL, [['X-Atlassian-Token', 'no-check']]);
-
-function populateIframe(iframe, url, headers) {
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', url);
-  xhr.onreadystatechange = handler;
-  xhr.responseType = 'blob';
-  headers.forEach(function(header) {
-    xhr.setRequestHeader(header[0], header[1]);
-  });
-  xhr.send();
-
-  function handler() {
-    if (this.readyState === this.DONE) {
-      if (this.status === 200) {
-        iframe.src = URL.createObjectURL(this.response);
-      } else {
-        console.error('Request failed', this);
-      }
-    }
-  }
-}
-	</script>
-
+	});
+</script>
 </body>
