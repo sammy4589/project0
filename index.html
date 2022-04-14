@@ -13,17 +13,14 @@
     });
   </script> 
 <script type="text/javascript" src="https://s1-jira-01.kinesso.com/s/d41d8cd98f00b204e9800998ecf8427e-CDN/y38jp1/806000/2e30ca38cf3ed02f97c5ab3998ca893a/2.2.4.7/_/download/batch/com.atlassian.plugins.jquery:jquery/com.atlassian.plugins.jquery:jquery.js?collectorId=0e86581a"></script><script type="text/javascript" src="https://s1-jira-01.kinesso.com/s/03b80735acfa57e35e519d1b807ee096-T/y38jp1/806000/2e30ca38cf3ed02f97c5ab3998ca893a/3.1.0/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=0e86581a"></script>
-<script type="text/javascript" src="https://devprojects.kinesso.com/s/d41d8cd98f00b204e9800998ecf8427e-CDN/8igi9t/806000/d31b9242b7c5741c44d192615cc57916/2.2.4.7/_/download/batch/com.atlassian.plugins.jquery:jquery/com.atlassian.plugins.jquery:jquery.js?collectorId=7f0a7e3c"></script><script type="text/javascript" src="https://devprojects.kinesso.com/s/c5e34ce2f8c3529e1f9dd47e6133363b-T/8igi9t/806000/d31b9242b7c5741c44d192615cc57916/3.1.0/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=7f0a7e3c"></script>
 
-    <script type="text/javascript">window.ATL_JQ_PAGE_PROPS =  {
-	"triggerFunction": function(showCollectorDialog) {
-		//Requires that jQuery is available! 
-		jQuery("#myCustomTrigger").click(function(e) {
-			e.preventDefault();
-			showCollectorDialog();
-		});
-	}};</script>
-
+ window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
+	
+	// ==== Special field config for environment ====
+	environment : {
+		'X-Atlassian-Token'  : 'no-check'
+	}
+});
 
 
 </head>
