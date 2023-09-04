@@ -25,6 +25,35 @@
 			showCollectorDialog();
 		});
 	}};</script>
+    
+<script type="text/javascript" src="https://kinesso-sandbox-545.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-3o5b4z/b/5/c95134bc67d3a521bb3f4331beb9b804/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=9f12bb54"></script>
+    
+    <script type="text/javascript">window.ATL_JQ_PAGE_PROPS = {
+
+//=== CR collector id in first paragraph for question 1 === 
+ '0bf0baaf' :{
+ "triggerFunction": function(showCollectorDialog) {
+ jQuery("#myCustomTrigger").click(function(e) {
+ e.preventDefault();
+ showCollectorDialog();
+ }); 
+ }
+ },
+
+//=== Inventory collector id in second paragraph for question 2 === 
+ '9f12bb54' :{  
+ "triggerFunction": function(showCollectorDialog) {
+ jQuery("#myCustomTrigger2").click(function(e) {
+ e.preventDefault();
+ showCollectorDialog();
+ });
+ }
+ }
+
+};
+
+</script>
+
 
 <main class="body-center text-center">
 <p>Amidst social distancing, financial uncertainty and economic downturn, many charities, fundraising efforts and NGOs have been hit hard this year.
@@ -34,7 +63,7 @@ With the announcement of the Movement Control Order (MCO), it becomes all the mo
 This is a platform to gather helping hands and also for those who struggle to meet ends to seek help.
 </p>
 <p>
-<a href="helpsneeded.html" class="btn btn-lg btn-secondary">Learn more</a>
+<a href="helpsneeded.html" class="btn btn-lg btn-secondary" id="myCustomTrigger2">Learn more</a>
 	<button type="button" class="btn btn-lg btn-secondary" id="myCustomTrigger">Support</button>
 </p>
 </main>
